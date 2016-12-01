@@ -26,12 +26,14 @@ p3 = 1 - hypergeom.cdf(0, deck_size, nr_of_target_cards, 7)
 p4 = 1 - hypergeom.cdf(0, 53, 4, 1)
 p5 = p3 + p4
 
-# Chance to draw at least 2 lands in by first draw.
+# Chance to draw at least 2 lands by first draw.
 p6 = 1 - \
      hypergeom.cdf(0, deck_size, nr_of_lands, 8) - \
      hypergeom.cdf(1, deck_size, nr_of_lands, 8)
 
 print p1
 print p2
+print p3
+print p4
 print p5
 print p6
