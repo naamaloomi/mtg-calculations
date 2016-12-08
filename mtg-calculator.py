@@ -31,9 +31,13 @@ p6 = 1 - \
      hypergeom.cdf(0, deck_size, nr_of_lands, 8) - \
      hypergeom.cdf(1, deck_size, nr_of_lands, 8)
 
+# Chance to draw  at least 1 of 6 counterspells in a TL deck by turn 3.
+p7 = 1 - hypergeom.cdf(0, 50, 6, 10)
+
 print p1
 print p2
 print p3
 print p4
 print p5
 print p6
+print p7
