@@ -34,6 +34,12 @@ p6 = 1 - \
 # Chance to draw  at least 1 of 6 counterspells in a TL deck by turn 3.
 p7 = 1 - hypergeom.cdf(0, 50, 6, 10)
 
+# Chance to draw at least 1 of 4 Leylines in 2 mulligans, i.e. down to 5 cards.
+p8 = 1 - (hypergeom.cdf(0, 60, 4, 7) * hypergeom.cdf(0, 60, 4, 6) * hypergeom.cdf(0, 60, 4, 5))
+
+# Chance to draw at least 1 of 12 dredge cards in opening hand.
+p9 = 1 - hypergeom.cdf(0, 60, 12, 7)
+
 print p1
 print p2
 print p3
@@ -41,3 +47,5 @@ print p4
 print p5
 print p6
 print p7
+print p8
+print p9
